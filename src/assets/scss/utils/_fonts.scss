@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Regular/Montserrat-Regular.eot"),
+  url('/src/assets/fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'), // Pretty Modern Browsers
+  url('/src/assets/fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'), // Safari, Android, iOS
+  url('/src/assets/fonts/Montserrat-Regular/Montserrat-Regular.svg') format('svg'); // Legacy iOS
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Bold/Montserrat-Bold.eot"),
+  url('/src/assets/fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), // Pretty Modern Browsers
+  url('/src/assets/fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), // Safari, Android, iOS
+  url('/src/assets/fonts/Montserrat-Bold/Montserrat-Bold.svg') format('svg'); // Legacy iOS
+  font-weight: 700;
+  font-style: normal;
+}

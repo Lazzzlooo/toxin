@@ -1,4 +1,30 @@
-h1 {
-  color: red;
-  display: flex;
+@import "utils/fonts";
+@import "utils/variable";
+
+body {
+  box-sizing: border-box;
+
+  font-family: $mainFonts;
+  font-size: $fontSize;
+  font-weight: 400;
+  line-height: $lineHeight;
+  color: rgba($mainColor, .75);
 }
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $mainColor;
+}
+h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: $mainColor;
+}
+h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: $mainColor;
+}
+
+
