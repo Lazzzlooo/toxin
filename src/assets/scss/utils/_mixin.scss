@@ -1,0 +1,15 @@
+@import "variable";
+
+
+@mixin resetList() {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetLink() {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba($mainColor, .75);
+}

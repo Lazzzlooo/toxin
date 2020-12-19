@@ -1,0 +1,29 @@
+@import "/src/assets/scss/utils/mixin";
+
+.header__wrapper {
+  display: flex;
+  max-width: 1160px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  ul {
+    @include resetList
+  }
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  a:first-child{
+    margin-right: 15px;
+  }
+}

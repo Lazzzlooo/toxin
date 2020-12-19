@@ -1,7 +1,10 @@
 @import "utils/fonts";
 @import "utils/variable";
+@import "../components/Header/header";
+@import "../components/Header/Nav/nav";
 
 body {
+  margin: 0;
   box-sizing: border-box;
 
   font-family: $mainFonts;
