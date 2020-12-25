@@ -1,6 +1,8 @@
-@import "/src/assets/scss/utils/mixin";
-@import "/src/assets/scss/utils/variable";
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
 .nav__list {
+
   li:first-of-type {
     font-weight: bold;
   }
@@ -16,6 +18,10 @@
 
   .material-icons {
     color: rgba($mainColor, .5);
+  }
+
+  .nav__dropdown {
+    margin-left: 2px;
   }
 
   .nav__dropdown-content {

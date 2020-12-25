@@ -1,7 +1,9 @@
 @import "utils/fonts";
 @import "utils/variable";
 @import "../components/Header/header";
-@import "../components/Header/Nav/nav";
+@import "../components/Nav/nav";
+@import "../components/Login/login";
+@import "../components/Button/button";
 
 body {
   margin: 0;

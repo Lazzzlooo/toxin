@@ -1,8 +1,13 @@
 @import "/src/assets/scss/utils/mixin";
 
+.header {
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
+
 .header__wrapper {
   display: flex;
   max-width: 1160px;
+  max-height: 70px;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
@@ -15,6 +20,15 @@
 
 .header__container {
   display: flex;
+  align-self: flex-start;
+  .header__nav {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  .header__login {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 
 .header__logo {
@@ -22,8 +36,8 @@
   align-items: center;
 
   padding-top: 15px;
-  padding-bottom: 15px;
-  a:first-child{
-    margin-right: 15px;
+  padding-bottom: 8px;
+  .header__logo-link:first-child{
+    margin-right: 12px;
   }
 }

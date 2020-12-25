@@ -1,0 +1,15 @@
+include ../Button/button
+
+- var classes = ['header__login', 'login'];
+- var list = [{text: 'войти', isOpacity: true}, {text: 'зарегистрироваться', isOpacity: false}]
+- var authorized = 0
+div(class=classes)
+    if authorized
+        .login__container
+            span.login__line
+            span.login__name Юлий Цезарь
+    else
+        ul.login__buttons-list
+          each item in list
+              li.login__item
+                +button(item.isOpacity, 'button', item.text)
