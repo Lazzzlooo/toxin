@@ -1,0 +1,55 @@
+@import "/src/assets/scss/utils/mixin";
+@import "/src/assets/scss/utils/variable";
+
+.input__container {
+  position: relative;
+}
+
+.input[type=email] {
+  box-sizing: border-box;
+  padding: 8px 43px 10px 14px;
+  width: 260px;
+
+  font-family: $mainFonts;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba($mainColor, .25);
+
+  border: 1px solid rgba($mainColor, .25);
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    color: rgba($mainColor, .75);
+    border: 1px solid rgba($mainColor, .75);
+    outline: none;
+
+
+  }
+}
+
+.input__button {
+  position: absolute;
+  right: 0;
+  height: 44px;
+  width: 40px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+
+  border: none;
+  background-color: inherit;
+  span {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: $primaryGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  .input__button-text_hidden {
+    @include visually-hidden;
+  }
+}

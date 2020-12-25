@@ -1,10 +1,12 @@
 @import "utils/fonts";
 @import "utils/variable";
 @import "../components/Header/header";
+@import "../components/Footer/footer";
 @import "../components/Nav/nav";
 @import "../components/Login/login";
 @import "../components/Button/button";
 @import "../components/Logo/logo";
+@import "../components/Input/input";
 
 body {
   margin: 0;
