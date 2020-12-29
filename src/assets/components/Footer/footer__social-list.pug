@@ -1,0 +1,10 @@
+mixin social-item(text, imgSource)
+    li.footer__social-item
+        a(href="#")
+            span= text
+            img(src= imgSource width= "24px" height= "22px")
+
+ul.footer__social-list
+    +social-item("Twitter", "/assets/img/twitter.svg")
+    +social-item("Facebook", "/assets/img/facebook.svg")
+    +social-item("Instagram", "/assets/img/instagram.svg")

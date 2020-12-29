@@ -1,7 +1,7 @@
 - var navigationList = ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
 - var aboutList = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
 - var supportList = ['Соглашения', 'Сообщества', 'Связь с нами']
-
+- var FOOTER_CREATIVE = 1
 mixin footer-list(list, title)
     ul(class= "footer__list")
         li(class= "footer__item")
@@ -10,34 +10,33 @@ mixin footer-list(list, title)
             li(class= "footer__item")
                 a(class= "footer__link" href='#')= item
 
-mixin social-item(text, imgSource)
-    li.footer__social-item
-        a(href="#")
-            span= text
-            img(src= imgSource)
 
 footer.footer
-    .footer__wrapper
+    if FOOTER_CREATIVE
+        .footer__wrapper_creative
+            include ../Logo/logo
+            include footer__copyright
+            include footer__social-list
+    else
+        .footer__wrapper
+            .footer__container
+                ul.footer__list
+                    li.footer__item
+                        include ../Logo/logo
+                    li.footer__item
+                        p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                +footer-list(navigationList, 'навигация')
+                +footer-list(aboutList, 'о нас')
+                +footer-list(supportList, 'cлужба поддержки')
+                ul.footer__list
+                    li.footer__item
+                        h3.footer__title Подписка
+                    li.footer__item
+                        p Получайте специальные предложения и новости сервиса
+                    li.footer__item
+                        form
+                            include ../Input/input
         .footer__container
-            ul.footer__list
-                li.footer__item
-                    include ../Logo/logo
-                li.footer__item
-                    p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-            +footer-list(navigationList, 'навигация')
-            +footer-list(aboutList, 'о нас')
-            +footer-list(supportList, 'cлужба поддержки')
-            ul.footer__list
-                li.footer__item
-                    h3.footer__title Подписка
-                li.footer__item
-                    p Получайте специальные предложения и новости сервиса
-                li.footer__item
-                    form
-                        include ../Input/input
-    .footer__container
-            p.footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
-            ul.footer__social-list
-                +social-item("Twitter", "/assets/img/twitter.svg")
-                +social-item("Facebook", "/assets/img/facebook.svg")
-                +social-item("Instagram", "/assets/img/instagram.svg")
+            include footer__copyright
+            include footer__social-list
+
