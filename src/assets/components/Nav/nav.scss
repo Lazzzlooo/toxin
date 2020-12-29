@@ -1,0 +1,64 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
+.nav__list {
+
+  li:first-of-type {
+    font-weight: bold;
+  }
+}
+.nav__item {
+  margin-right: 20px;
+  display: flex;
+  position: relative;
+
+  a {
+    @include resetLink;
+  }
+
+  .material-icons {
+    color: rgba($mainColor, .5);
+  }
+
+  .nav__dropdown {
+    margin-left: 2px;
+  }
+
+  .nav__dropdown-content {
+    left: 0;
+    display: none;
+    position: absolute;
+    min-width: 100px;
+  }
+
+  &:hover {
+    .nav__link {
+      color: $mainColor;
+    }
+
+    .material-icons {
+      color: $mainColor;
+    }
+
+    .nav__dropdown-content {
+      display: flex;
+      flex-flow: column;
+
+      a:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+.nav__button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,42 @@
+- var navigationList = ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+- var aboutList = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+- var supportList = ['Соглашения', 'Сообщества', 'Связь с нами']
+- var FOOTER_CREATIVE = 1
+mixin footer-list(list, title)
+    ul(class= "footer__list")
+        li(class= "footer__item")
+            h3(class= "footer__title")= title
+        each item in list
+            li(class= "footer__item")
+                a(class= "footer__link" href='#')= item
+
+
+footer.footer
+    if FOOTER_CREATIVE
+        .footer__wrapper_creative
+            include ../Logo/logo
+            include footer__copyright
+            include footer__social-list
+    else
+        .footer__wrapper
+            .footer__container
+                ul.footer__list
+                    li.footer__item
+                        include ../Logo/logo
+                    li.footer__item
+                        p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                +footer-list(navigationList, 'навигация')
+                +footer-list(aboutList, 'о нас')
+                +footer-list(supportList, 'cлужба поддержки')
+                ul.footer__list
+                    li.footer__item
+                        h3.footer__title Подписка
+                    li.footer__item
+                        p Получайте специальные предложения и новости сервиса
+                    li.footer__item
+                        form
+                            include ../Input/input
+        .footer__container
+            include footer__copyright
+            include footer__social-list
+
