@@ -14,7 +14,7 @@ mixin footer-list(list, title)
 footer.footer
     if FOOTER_CREATIVE
         .footer__wrapper_creative
-            include ../Logo/logo
+            include ../logo/logo
             include footer__copyright
             include footer__social-list
     else
@@ -22,7 +22,7 @@ footer.footer
             .footer__container
                 ul.footer__list
                     li.footer__item
-                        include ../Logo/logo
+                        include ../logo/logo
                     li.footer__item
                         p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                 +footer-list(navigationList, 'навигация')
@@ -35,7 +35,7 @@ footer.footer
                         p Получайте специальные предложения и новости сервиса
                     li.footer__item
                         form
-                            include ../Input/input
+                            include ../input/input
         .footer__container
             include footer__copyright
             include footer__social-list
