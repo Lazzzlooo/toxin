@@ -1,4 +1,4 @@
 mixin dropdown(tag, tagClass, title)
-    .dropdown
-        #{tag}(class = tagClass data-attribute= "button")= title
+    .dropdown(data-attribute= "button")
+        #{tag}(class = tagClass)= title
         span.material-icons keyboard_arrow_down
