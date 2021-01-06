@@ -2,15 +2,12 @@
 @import "../../scss/utils/variable";
 
 .checkbox {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  line-height: 18px;
-  @include inputAppearance(none);
-  cursor: pointer;
+  @include input(4px, $done);
+
   &.checkbox__desrc {
     font-weight: bold;
-    p{
+
+    p {
       padding: 5px 0 0;
       margin: 0;
       font-weight: 400;
@@ -19,29 +16,9 @@
     }
   }
 
-
   span {
     display: flex;
     flex-flow: column;
-  }
-
-  .checkbox__input {
-    margin: 0 10px 0 0;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgba($mainColor, .25);
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-
-    &:checked {
-      border-color: $purple;
-      background-image: url($done);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 50% 50%;
-    }
   }
 }
 

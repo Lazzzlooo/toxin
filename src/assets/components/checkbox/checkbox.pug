@@ -1,11 +1,11 @@
 mixin checkbox(id, item, isChecked, isDescription)
     if isDescription
         label(for= id).checkbox.checkbox__desrc
-            input(type='checkbox' id= id checked= isChecked).checkbox__input
+            input(type='checkbox' id= id checked= isChecked)
             span
                 =item
                 p На 1 этаже вас встретит специалист  и проводит до номера.
     else
         label(for= id).checkbox
-            input(type='checkbox' id= id checked= isChecked).checkbox__input
+            input(type='checkbox' id= id checked= isChecked)
             =item

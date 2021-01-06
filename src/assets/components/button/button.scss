@@ -15,7 +15,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  &:hover {
+  &:active {
     opacity: .5;
   }
 
@@ -24,7 +24,7 @@
 .button_opacity {
   color: $purple;
   padding: 2px;
-  &:hover{
+  &:active{
     color: $mainColor;
   }
 }
@@ -34,7 +34,4 @@
   display: block;
   background: #fff;
   border-radius: 22px;
-  &:hover {
-  }
-
 }

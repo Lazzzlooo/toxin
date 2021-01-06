@@ -1,0 +1,35 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
+.rate {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+  @include inputAppearance(none);
+  label {
+    @include visually-hidden();
+  }
+  input[type=radio] {
+    cursor: pointer;
+
+    width: 24px;
+    height: 24px;
+    background-image: url($starOutline);
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:checked {
+      background-image: url($star);
+
+    }
+  }
+}
+
+.rate > input:checked ~ input {
+  background-image: url($star);
+}
+
+.rate:not(:checked) > input:hover,
+.rate:not(:checked) > input:hover ~ input {
+  background-image: url($star);
+
+}
