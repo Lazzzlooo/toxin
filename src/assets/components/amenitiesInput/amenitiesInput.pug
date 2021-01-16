@@ -1,0 +1,24 @@
+include ../dropdown/dropdown
+- var rooms = ['спальни', 'кровати', 'ванные комнаты']
+- var guests = ['взрослые', 'дети', 'младенцы']
+
+mixin amenitiesInput(list, selector, placeholder, isControl)
+    form
+        .input__container.opened.amenitiesInput(data-attribute="dropdown" class = selector)
+            input(type= "text" class= "input" placeholder= placeholder id= selector value= '' readonly)
+            +dropdown("button", "input__button", "" )
+            ul.amenitiesInput__list
+                each item in list
+                    li.amenitiesInput__item
+                        p(data-attribute='input-title')= item
+                        .amenitiesInput__container(data-attribute="input-buttons" data-title= item)
+                            button#minus(type= "button" data-attribute="input-button") -
+                            input(data-attribute="input-count" value="0" readonly)
+                            button#plus(data-attribute="input-button" type= "button") +
+                if isControl
+                    .amenitiesInput__button-container
+                        button(type= "reset") Очистить
+                        button(type= "submit") Применить
+
++amenitiesInput(rooms, "room", "2 спальни, 2 кровати...", false)
++amenitiesInput(guests, "guest", "3 Гостя", true)

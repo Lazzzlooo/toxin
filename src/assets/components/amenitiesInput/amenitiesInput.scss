@@ -1,7 +1,7 @@
 @import "/src/assets/scss/utils/mixin";
 @import "/src/assets/scss/utils/variable";
 
-.inputDropdown {
+.amenitiesInput {
   .input {
     border: 1px solid rgba($mainColor, .5);
   }
@@ -14,10 +14,9 @@
       color: rgba($mainColor, .5);
     }
   }
-
 }
 
-.inputDropdown__list {
+.amenitiesInput__list {
   @include resetList();
   display: flex;
   flex-flow: column;
@@ -32,7 +31,7 @@
 
 }
 
-.inputDropdown__item {
+.amenitiesInput__item {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -74,7 +73,7 @@
 
 }
 
-.inputDropdown__container {
+.amenitiesInput__container {
   display: flex;
   align-items: center;
 
@@ -90,7 +89,7 @@
 
 }
 
-.inputDropdown__button-container {
+.amenitiesInput__button-container {
   display: flex;
   button {
     padding: 0 0 10px;
