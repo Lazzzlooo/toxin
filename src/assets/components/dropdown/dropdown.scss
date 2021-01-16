@@ -5,15 +5,18 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  [data-attribute= 'button'] {
-  }
 }
-[data-attribute= 'dropdown'] > *:not(:first-child) {
+[data-attribute= 'dropdown'] > *:not(:first-child){
   display: none;
 }
 
+[data-attribute= 'dropdown'] > [data-attribute= 'button'] {
+  display: inline-flex;
+  align-items: center;
+}
+
 [data-attribute= 'dropdown'].opened > *{
-  display: flex;
+  display: inline-flex;
   .material-icons {
     transform: rotate(180deg);
   }

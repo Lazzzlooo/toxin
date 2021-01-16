@@ -14,6 +14,12 @@
 @import "../components/likeButton/likeButton";
 @import "../components/rateButton/rateButton";
 @import "../components/dropdown/dropdown";
+@import "../components/inputDropdown/inputDropdown";
+
+* {
+  box-sizing: border-box;
+}
+
 
 body {
   margin: 0;

@@ -7,6 +7,6 @@ const buttons = document.querySelectorAll('[data-attribute="like"]').forEach(but
         } else {
             count;
         }
-        button.querySelector('p').innerHTML = count;
+        button.querySelector('p').innerHTML = count.toString();
     }
 })

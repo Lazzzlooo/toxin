@@ -1,0 +1,22 @@
+include ../dropdown/dropdown
+- var list = ['спальни', 'кровати', 'ванные комнаты']
+- var guests = ['взрослые', 'дети', 'младенцы']
+mixin inputDropdown(list, placeholder)
+    form
+        .input__container.opened.inputDropdown(data-attribute="dropdown")
+            input(type= "text" class= "input" placeholder= placeholder id="inputDropdown" value= '' readonly)
+            +dropdown("button", "input__button", "" )
+            ul.inputDropdown__list
+                each item in list
+                    li.inputDropdown__item
+                        p(data-attribute='input-title')= item
+                        .inputDropdown__container(data-attribute="input-buttons" data-title= item)
+                            button#minus(type= "button" data-attribute="input-button") -
+                            input(data-attribute="input-count" value="0" readonly)
+                            button#plus(data-attribute="input-button" type= "button") +
+                //.inputDropdown__button-container
+                //    button(type= "reset") Очистить
+                //    button(type= "submit") Применить
+
+
++inputDropdown(list, "2 спальни, 2 кровати...")

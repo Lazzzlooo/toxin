@@ -3,9 +3,10 @@
 
 .input__container {
   position: relative;
+  width: 260px;
 }
 
-.input[type=email] {
+.input {
   box-sizing: border-box;
   padding: 8px 43px 10px 14px;
   width: 260px;
