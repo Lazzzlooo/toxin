@@ -12,9 +12,9 @@ mixin amenitiesInput(list, selector, placeholder, isControl)
                     li.amenitiesInput__item
                         p(data-attribute='input-title')= item
                         .amenitiesInput__container(data-attribute="input-buttons" data-title= item)
-                            button#minus(type= "button" data-attribute="input-button") -
+                            button(type= "button" data-attribute="input-button" data-button="minus") -
                             input(data-attribute="input-count" value="0" readonly)
-                            button#plus(data-attribute="input-button" type= "button") +
+                            button(data-attribute="input-button" type= "button" data-button="plus") +
                 if isControl
                     .amenitiesInput__button-container
                         button(type= "reset") Очистить

@@ -1,13 +1,16 @@
-import {itemContainer} from "../../js/common";
+import {itemContainer} from "./common";
 
 const roomList = ['спальни', 'кровати', 'ванные комнаты']
-const room = document.querySelector('.room')
-const roomInput = room.querySelector('#room');
-
-
 const guestList = ['взрослые', 'дети', 'младенцы']
-const guest = document.querySelector('.guest')
-const guestInput = guest.querySelector('#guest');
 
-itemContainer(roomList, roomInput, room,  'string')
-itemContainer(guestList, guestInput, guest,  'string')
+function initListener(list, selector, id, outputText) {
+    const nodeList = document.querySelector(selector)
+    if (nodeList) {
+        const input = nodeList.querySelector(id)
+        return itemContainer(list, input, nodeList, outputText)
+    }
+    return undefined
+}
+
+initListener(roomList, '.room', '#room', 'string')
+initListener(guestList, '.guest', '#guest', 'string')

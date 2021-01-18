@@ -3,8 +3,8 @@ function addedContainerClass(inputSelector, selector) {
         constructor(selector) {
             this.$el = inputSelector.querySelector(selector);
             this.title = this.$el.dataset.title
-            this.$btnPlus = this.$el.querySelector('#plus');
-            this.$btnMinus = this.$el.querySelector('#minus');
+            this.$btnPlus = this.$el.querySelector('[data-button="plus"]');
+            this.$btnMinus = this.$el.querySelector('[data-button="minus"]');
             this.$input = this.$el.querySelector('[data-attribute="input-count"]')
             this.value = this.$input.value
         }
