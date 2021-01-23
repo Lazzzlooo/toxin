@@ -1,0 +1,46 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
+.pagination {
+  width: 240px;
+}
+
+.pagination__list {
+  @include resetList();
+  .pagination-prev,
+  .pagination-next {
+    background: $secondaryGradient;
+    border-radius: 50%;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+
+  .active {
+    background: $primaryGradient;
+    border-radius: 50%;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 12px;
+    color: rgba($mainColor, .5);
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.pagination__footer {
+  padding-top: 10px;
+  text-align: center;
+}

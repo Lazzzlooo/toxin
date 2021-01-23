@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
+    "paginationjs": "^2.1.5",
     "webpack-jquery-ui": "^2.0.1"
   }
 }
