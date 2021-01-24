@@ -4,13 +4,15 @@ const roomList = ['спальни', 'кровати', 'ванные комнат
 const guestList = ['взрослые', 'дети', 'младенцы']
 
 function initListener(list, selector, id, outputText) {
-    const nodeList = document.querySelector(selector)
-    if (nodeList) {
-        const input = nodeList.querySelector(id)
-        return itemContainer(list, input, nodeList, outputText)
-    }
-    return undefined
+    document.querySelectorAll(selector).forEach(el => {
+        if (el) {
+            const input = el.querySelector(id)
+            return itemContainer(list, input, el, outputText)
+        }
+    })
 }
 
-initListener(roomList, '.room', '#room', 'string')
-initListener(guestList, '.guest', '#guest', 'string')
+    initListener(roomList, '.room', '#room', 'string')
+
+
+    initListener(guestList, '.guest', '#guest', 'string')
