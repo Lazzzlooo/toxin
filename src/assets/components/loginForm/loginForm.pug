@@ -1,0 +1,16 @@
+include ../button/button
+include ../input/input
+
+form.login-form
+    ul.login-form__list
+        li.login-form__item
+            h1.login-form__title Войти
+        li.login-form__item
+            +input("email", "Email")
+        li.login-form__item
+            +input("password", "Пароль")
+        li.login-form__item
+            +button(false, 'button button_form', 'войти', 'arrow_forward')
+        li.login-form__item
+            p.login-form__text Нет аккаунта на Toxin?
+            +button(true, 'button', 'создать')

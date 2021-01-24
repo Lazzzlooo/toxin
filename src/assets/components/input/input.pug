@@ -1,6 +1,7 @@
-mixin input
+mixin input(type, placeholder, isButton)
     .input__container
-        input(type= "email" class= "input" placeholder= "Email")
-        button.input__button
-            span.input__button-text_hidden Submit
-            span.material-icons arrow_forward
+        input(type= type class= "input" placeholder= placeholder)
+        if isButton
+            button.input__button
+                span.input__button-text_hidden Submit
+                span.material-icons arrow_forward
