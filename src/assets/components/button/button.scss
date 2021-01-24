@@ -1,0 +1,60 @@
+@import "/src/assets/scss/utils/mixin";
+@import "/src/assets/scss/utils/variable";
+
+.button {
+  padding: 9px 21px 10px 19px;
+  border-radius: 22px;
+
+  background: $primaryGradient;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-family: $mainFonts;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  &:active {
+    opacity: .5;
+  }
+
+}
+
+.button_opacity {
+  color: $purple;
+  padding: 2px;
+
+  &:active {
+    color: $mainColor;
+  }
+  .button__text-container {
+    padding: 7px 18px 8px;
+
+    background: #fff;
+    border-radius: 22px;
+
+  }
+}
+
+.button__text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.button_form {
+  position: relative;
+  padding: 14px 20px 15px 20px;
+  width: 320px;
+  height: 44px;
+  .button__text {
+    width: 280px;
+  }
+  .material-icons {
+    position: absolute;
+    right: 10px;
+  }
+}

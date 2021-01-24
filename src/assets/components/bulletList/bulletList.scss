@@ -1,0 +1,29 @@
+@import "/src/assets/scss/utils/mixin";
+@import "/src/assets/scss/utils/variable";
+
+
+.bullet-list {
+  @include resetList();
+  flex-flow: column;
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.bullet-list__item {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  width: 235px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba($mainColor, .25);
+  }
+
+}

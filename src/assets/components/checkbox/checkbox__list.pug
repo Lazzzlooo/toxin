@@ -1,0 +1,9 @@
+include checkbox
+include ../dropdown/dropdown
+
+- var list = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+ul.checkbox__list.opened(data-attribute= 'dropdown')
+    +dropdown("h3",'', "expandable checkbox list")
+    each item, index in list
+        li.checkbox__item
+            +checkbox('checkbox#'+ index, item, false, true)

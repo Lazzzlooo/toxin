@@ -1,0 +1,8 @@
+mixin button(isOpacity, itemClass, text, icon)
+    button(class= isOpacity ? `${itemClass} button_opacity`: itemClass)
+        span.button__text-container
+            span.button__text= text
+            span.material-icons= icon
+
+
++button(0, 'button button_form', 'перейти к оплате', 'arrow_forward')

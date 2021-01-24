@@ -1,0 +1,13 @@
+include ../likeButton/likeButton
+article.comment
+    .comment__container
+        img.comment__user-img(src='assets/img/user.jpg')
+        +like-button(10)
+    .comment__container
+        blockquote
+            cite.comment__user Мурад Сарафанов
+            time.comment__time(datetime="2021-01-19 19:00") 5 дней назад
+            p.comment__text
+                | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
+                | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару —
+                | никто не жаловался из соседей.

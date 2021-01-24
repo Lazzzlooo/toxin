@@ -1,12 +1,29 @@
 @import "utils/fonts";
 @import "utils/variable";
-@import "../components/Header/header";
-@import "../components/Footer/footer";
-@import "../components/Nav/nav";
-@import "../components/Login/login";
-@import "../components/Button/button";
-@import "../components/Logo/logo";
-@import "../components/Input/input";
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/nav/nav";
+@import "../components/login/login";
+@import "../components/button/button";
+@import "../components/logo/logo";
+@import "../components/input/input";
+@import "../components/bulletList/bulletList";
+@import "../components/checkbox/checkbox";
+@import "../components/radio/radio";
+@import "../components/toggle/toggle";
+@import "../components/likeButton/likeButton";
+@import "../components/rateButton/rateButton";
+@import "../components/dropdown/dropdown";
+@import "../components/amenitiesInput/amenitiesInput";
+@import "../components/range/range";
+@import "../components/pagination/pagination";
+@import "../components/iconTextList/iconTextList";
+@import "../components/comment/comment";
+
+* {
+  box-sizing: border-box;
+}
+
 
 body {
   margin: 0;
@@ -30,6 +47,7 @@ h2 {
   color: $mainColor;
 }
 h3 {
+  text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   color: $mainColor;

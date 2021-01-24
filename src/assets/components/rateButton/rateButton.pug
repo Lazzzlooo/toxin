@@ -1,0 +1,17 @@
+mixin rate-button
+    .rate
+        input#star5(type='radio' name='rate' value='5')
+        label(for='star5' title='5 stars') 5 stars
+        input#star4(type='radio' name='rate' value='4')
+        label(for='star4' title='4 stars') 4 stars
+        input#star3(type='radio' name='rate' value='3')
+        label(for='star3' title='3 stars') 3 stars
+        input#star2(type='radio' name='rate' value='2')
+        label(for='star2' title='2 stars') 2 stars
+        input#star1(type='radio' name='rate' value='1')
+        label(for='star1' title='1 star') 1 star
+form
+    +rate-button
+form
+    +rate-button
++rate-button

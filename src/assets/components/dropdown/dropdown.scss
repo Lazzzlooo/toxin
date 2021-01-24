@@ -1,0 +1,26 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+[data-attribute= 'dropdown'] > *:not(:first-child){
+  display: none;
+}
+
+[data-attribute= 'dropdown'] > [data-attribute= 'button'] {
+  display: inline-flex;
+  align-items: center;
+}
+
+[data-attribute= 'dropdown'].opened > *{
+  display: inline-flex;
+  .material-icons {
+    transform: rotate(180deg);
+  }
+}
+
+
+

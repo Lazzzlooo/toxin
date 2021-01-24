@@ -1,0 +1,37 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
+.nav__list {
+  li:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.nav__item {
+  margin-right: 21px;
+  display: flex;
+  flex-flow: column;
+
+  a {
+    @include resetLink;
+  }
+
+  &:hover {
+    .nav__link {
+      color: $mainColor;
+    }
+
+    .material-icons {
+      color: $mainColor;
+    }
+
+    a:hover {
+      color: $mainColor;
+    }
+  }
+
+}
+.nav__link-content {
+  display: flex;
+  flex-flow: column;
+}
