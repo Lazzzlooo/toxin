@@ -1,0 +1,13 @@
+-var list = [{icon: 'insert_emoticon', title: 'Комфорт', desrc: 'Шумопоглощающие стены'},{icon: 'location_city', title: 'Удобство', desrc: 'Окно в каждой из спален'}]
+
+
+mixin iconTextList(list)
+    ul.iconTextList
+        each item in list
+            li.iconTextList__item
+                span.material-icons= item.icon
+                .iconTextList__text
+                    p.iconTextList__title= item.title
+                    p.iconTextList__descr= item.desrc
+
++iconTextList(list)

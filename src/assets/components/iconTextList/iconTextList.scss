@@ -1,0 +1,31 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variable";
+
+.iconTextList {
+  @include resetList();
+  flex-flow: column;
+}
+
+.iconTextList__item {
+  display: flex;
+  flex-flow: row;
+  max-width: 280px;
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba($mainColor, .1);
+  .material-icons {
+    margin-right: 10px;
+    font-size: 48px;
+    background: $primaryGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $purple;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .iconTextList__title {
+    font-weight: 700;
+  }
+}
