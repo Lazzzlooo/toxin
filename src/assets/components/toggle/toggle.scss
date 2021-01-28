@@ -3,14 +3,14 @@
 
 .toggle-button {
   @include inputAppearance(none);
+  cursor: pointer;
 
   input[type=checkbox] {
     position: relative;
 
     width: 40px;
     height: 20px;
-    margin: 0;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
 
     vertical-align: top;
 

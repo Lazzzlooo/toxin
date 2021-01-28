@@ -1,0 +1,29 @@
+include ../button/button
+include ../input/input
+include ../radio/radio
+include ../toggle/toggle
+
+form.registrationForm
+    ul.registrationForm__list
+        li.registrationForm__item
+            h1.registrationForm__title Регистрация аккаунта
+        li.registrationForm__item
+            +input("text", "Имя")
+            +input("text", "Фамилия")
+        li.registrationForm__item
+            +radio('male','gender','true', 'Мужчина', true)
+            +radio('female','gender','false', 'Женщина', false)
+        li.registrationForm__item
+            h3 дата рождения
+            +input("date")
+        li.registrationForm__item
+            h3 данные для входа в сервис
+            +input("email", "Email")
+            +input("password", "Пароль")
+        li.registrationForm__item
+            +toogle-button('toggle', 'toggle', 'Получать спецпредложения')
+        li.registrationForm__item
+            +button(false, 'button button_form', 'перейти к оплате', 'arrow_forward')
+        li.registrationForm__item
+            p.registrationForm__text Уже есть аккаунт на Toxin
+            +button(true, 'button', 'войти')

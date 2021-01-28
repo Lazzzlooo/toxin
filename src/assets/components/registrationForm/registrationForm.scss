@@ -1,11 +1,6 @@
 @import "/src/assets/scss/utils/mixin";
 @import "/src/assets/scss/utils/variable";
 
-.login-form {
+.registrationForm {
   @include cardStyle();
-  &__item {
-    input[type="password"] {
-      margin-bottom: 20px;
-    }
-  }
 }

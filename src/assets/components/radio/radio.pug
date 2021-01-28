@@ -1,7 +1,5 @@
 mixin radio(id,name, value, item, isChecked)
     label(for= id).radio
         input(type='radio' name= name value= value id= id checked= isChecked)
-        =item
+        span= item
 
-+radio(1,'boolean','true', 'true', true)
-+radio(2,'boolean','false', 'false', false)
