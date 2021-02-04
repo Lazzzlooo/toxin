@@ -1,0 +1,8 @@
+mixin datepicker(list=['прибытие', 'выезд'])
+    ul.datepicker__list#datepicker
+        each item in list
+            li.datepicker__item
+                label
+                    h3= item
+                .datepicker__wrapper
+                    input(data-datepicker = "input" placeholder="ДД.ММ.ГГГГ")

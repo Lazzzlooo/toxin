@@ -1,0 +1,205 @@
+@import "node_modules/air-datepicker/dist/css/datepicker";
+@import "/src/assets/scss/utils/mixin";
+@import "/src/assets/scss/utils/variable";
+
+.datepicker {
+  width: 320px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  font-family: $mainFonts;
+  font-size: 12px;
+
+  &--nav {
+    width: 280px;
+    padding: 20px 0 7px;
+
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+
+    &-action {
+      width: auto;
+    }
+
+    h2 {
+      width: 90px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .material-icons {
+      line-height: 85%;
+      color: $purple;
+    }
+  }
+
+  &--content {
+    padding: 0;
+    color: rgba($mainColor, .5);
+
+  }
+
+  &--body {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--buttons {
+    border: none;
+  }
+
+  &--cell {
+    height: 40px;
+
+    &.-range-from-,
+    &.-range-to- {
+      background: transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba($purple, .25) 0%, rgba(#8BA4F9, .25) 100%);
+
+        &.-focus- {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.-range-from- {
+      &::before {
+        border-radius: 50% 0 0 50%
+      }
+    }
+
+    &.-range-to- {
+      &::before {
+        border-radius: 0 50% 50% 0
+      }
+    }
+
+    &-day {
+      width: 40px;
+      text-align: center;
+    }
+
+    &.-current- {
+      background: $secondaryGradient;
+      color: #FFFFFF;
+      border-radius: 50%;
+    }
+
+    &.-selected- {
+      background: $primaryGradient;
+      color: #FFFFFF;
+      border-radius: 50%;
+
+      &.-focus- {
+        background: $primaryGradient;
+      }
+
+      &.-current- {
+        background: $primaryGradient;
+        color: #FFFFFF;
+        border-radius: 50%;
+      }
+    }
+
+    &.-in-range- {
+      position: relative;
+      background: linear-gradient(180deg, rgba($purple, .25) 0%, rgba(#8BA4F9, .25) 100%);
+      color: inherit;
+
+    }
+
+    &.-disabled- {
+      color: rgba($mainColor, .25);
+    }
+
+    &--day-name {
+      color: $purple;
+      text-transform: none;
+      font-size: 12px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.datepicker__list {
+  @include resetList();
+}
+.datepicker__item:not(:last-child) {
+  margin-right: 20px;
+}
+.datepicker__buttons {
+  width: 280px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+
+  .datepicker__button {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $purple;
+
+    cursor: pointer;
+
+    &:active {
+      color: rgba($mainColor, .5);
+    }
+
+  }
+}
+
+input[data-datepicker = "input"] {
+  width: 150px;
+  padding: 10px 32px 14px 13px;
+
+  border: 1px solid rgba($mainColor, .25);
+  border-radius: 4px;
+
+  font-family: $mainFonts;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($mainColor, .75);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid rgba($mainColor, .5);
+
+  }
+
+  &::placeholder {
+    color: rgba($mainColor, .75);
+
+  }
+}
+
+.datepicker__wrapper {
+  position: relative;
+  &::after {
+    content: 'expand_more';
+    font-family: $iconsFonts;
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+}
+
