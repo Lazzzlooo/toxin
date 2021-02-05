@@ -50,6 +50,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "air-datepicker": "^2.2.3",
     "jquery": "^3.5.1",
     "paginationjs": "^2.1.5",

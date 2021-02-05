@@ -1,0 +1,69 @@
+@import '~@splidejs/splide/dist/css/splide.min';
+
+.splide {
+  &__arrow {
+    width: 44px;
+    height: 100%;
+
+    background: transparent;
+    color: #FFFFFF;
+
+    &--prev {
+      .material-icons {
+        transform: rotate(90deg);
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
+
+      left: 0;
+    }
+
+    &--next {
+      .material-icons {
+        transform: rotate(-90deg);
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
+
+      right: 0;
+
+    }
+  }
+
+  &__pagination {
+    width: 42px;
+    justify-content: space-between;
+    left: inherit;
+    right: 12.5px;
+    bottom: 15px;
+    transform: translateX(0);
+
+    &__page {
+      margin: 0;
+      border: 1px solid #FFFFFF;
+      filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+      opacity: 1;
+      background: transparent;
+
+      &.is-active {
+        background: #FFFFFF;
+        border: none;
+      }
+    }
+  }
+
+}
