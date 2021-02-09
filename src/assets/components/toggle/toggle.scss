@@ -4,6 +4,7 @@
 .toggle-button {
   @include inputAppearance(none);
   cursor: pointer;
+  display: flex;
 
   input[type=checkbox] {
     position: relative;
@@ -46,5 +47,8 @@
         background-color: $purple;
       }
     }
+  }
+  span {
+    line-height: 18px;
   }
 }

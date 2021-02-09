@@ -21,6 +21,7 @@
 @import "../components/comment/comment";
 @import "../components/loginForm/loginForm";
 @import "../components/registrationForm/registrationForm";
+@import "../components/searchRoomForm/searchRoomForm";
 @import "../components/datepicker/datepicker";
 @import "../components/slider/slider";
 
@@ -42,11 +43,13 @@ body {
 
 h1 {
   font-size: 24px;
+  line-height: 29.3px;
   font-weight: 700;
   color: $mainColor;
 }
 h2 {
   font-size: 19px;
+  line-height: 23.2px;
   font-weight: 700;
   color: $mainColor;
 }

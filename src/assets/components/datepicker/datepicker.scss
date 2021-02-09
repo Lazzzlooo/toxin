@@ -133,6 +133,7 @@
 }
 .datepicker__list {
   @include resetList();
+  margin-bottom: 4px;
 }
 .datepicker__item:not(:last-child) {
   margin-right: 20px;
@@ -164,7 +165,8 @@
 
 input[data-datepicker = "input"] {
   width: 150px;
-  padding: 10px 32px 14px 13px;
+  padding: 10px 32px 14px 14px;
+  margin-top: 1px;
 
   border: 1px solid rgba($mainColor, .25);
   border-radius: 4px;
@@ -194,8 +196,8 @@ input[data-datepicker = "input"] {
     font-family: $iconsFonts;
     font-size: 24px;
     position: absolute;
-    top: 8px;
-    right: 9px;
+    top: 11px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
