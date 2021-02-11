@@ -1,6 +1,6 @@
 include ../button/button
 include ../datepicker/datepicker
-include ../amenitiesInput/amenitiesInput
+include ../guestDropdown/guestDropdown
 
 form.search-room
     ul.search-room__list
@@ -10,7 +10,7 @@ form.search-room
             +datepicker
         li.search-room__item
             h3 гости
-            +amenitiesInput(guests, "guest", "Сколько гостей", true)
+            +guestDropdown()
         li.search-room__item
             +button(false, 'button button_form', 'подобрать номер', 'arrow_forward')
 

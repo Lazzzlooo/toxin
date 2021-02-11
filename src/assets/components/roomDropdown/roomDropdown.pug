@@ -1,4 +1,7 @@
-mixin guestDropdown
+include ../iqdropdown/iqdropdown
+
+
+mixin roomDropdown()
     - var rooms = [{id: "bedrooms", text: "спальни"}, {id: "beds", text: "кровати"}, {id: "bathroom", text: "ванные комнаты"},]
     +iqdropdown(rooms, 'js-room-input', true, false)
 
