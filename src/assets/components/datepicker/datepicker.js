@@ -22,14 +22,14 @@ class Datepicker {
     }
 
     _bindThis() {
-        this._handleDatePickerInputInputClick = this._handleDatePickerInputInputClick.bind(this);
+        this._handleDatePickerInputClick = this._handleDatePickerInputClick.bind(this);
     }
 
     _addEventListeners() {
-        this._$inputs[1].addEventListener('click', this._handleDatePickerInputInputClick);
+        this._$inputs[1].addEventListener('click', this._handleDatePickerInputClick);
     }
 
-    _handleDatePickerInputInputClick() {
+    _handleDatePickerInputClick() {
         this._datepicker.show();
     }
 

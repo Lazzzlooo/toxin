@@ -1,0 +1,20 @@
+
+- var guests = [{id: "adults", text: "взрослые"}, {id: "children", text: "дети"}, {id: "babies", text: "младенцы"},]
+
+mixin iqdropdown(list, isOpen, hasButton)
+    - var openClass = isOpen ? 'menu-open' : ''
+    .iqdropdown-container
+        .iqdropdown(class = openClass)
+            p.iqdropdown-selection
+            .iqdropdown-menu
+                each item in list
+                    .iqdropdown-menu-option(data-id=item.id)
+                        div
+                            p.iqdropdown-item= item.text
+                if hasButton
+                    .iqdropdown__buttons
+                        button(data-button="clear").iqdropdown__button.button-hidden Очистить
+                        button(data-button="apply").iqdropdown__button Применить
+
+
++iqdropdown(guests, false, true)
