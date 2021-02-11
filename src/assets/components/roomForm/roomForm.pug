@@ -1,0 +1,38 @@
+include ../button/button
+include ../datepicker/datepicker
+include ../cartTitle/cardTitle
+include ../guestDropdown/guestDropdown
+
+form.room-form
+    ul.room-form__list
+        li.room-form__item
+            h1.room-form__title
+                +cardTitle('888', 'люкс', '9 990₽')
+        li.room-form__item
+            +datepicker
+        li.room-form__item
+            h3 гости
+            +guestDropdown()
+        li.room-form__item
+            ul.room-form__price-list
+                li.room-form__price-item
+                    .room-form__price_text 9 990₽ х 4 суток
+                    .room-form__price_value 39 960₽
+                li.room-form__price-item
+                    .room-form__price_text
+                        span Сбор за услуги: скидка 2 179₽
+                        .room-form__price_toolip(title='скидка 5%') i
+                    .room-form__price_value 0₽
+                li.room-form__price-item
+                    .room-form__price_text
+                        span Сбор за дополнительные услуги
+                        .room-form__price_toolip(title='Какие-то доп услуги') i
+                    .room-form__price_value 300₽
+        li.room-form__item
+            .room-form__total
+                h2.room-form__total_text Итого
+                span.room-form__total_line
+                h2.room-form__total_value 38 081₽
+        li.room-form__item
+            +button(false, 'button button_form', 'забронировать', 'arrow_forward')
+

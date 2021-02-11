@@ -1,0 +1,86 @@
+@import "/src/assets/scss/utils/mixin";
+@import "/src/assets/scss/utils/variable";
+
+.room-form {
+  @include cardStyle();
+  padding-top: rem(39px);
+  padding-bottom: 30px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+
+  }
+
+  input[type=text] {
+    margin-bottom: 0;
+  }
+
+  &__price-list {
+    @include resetList();
+    margin-top: 8px;
+    flex-flow: column;
+  }
+
+  &__price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+  }
+
+  &__price_text {
+    display: flex;
+
+    span {
+      width: 214px;
+      line-height: 18px;
+    }
+  }
+
+  &__price_toolip {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+
+    border: 1px solid rgba($mainColor, .25);
+    border-radius: 50%;
+    cursor: pointer;
+
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: rgba($mainColor, .25);
+
+    &:hover {
+      color: $purple;
+      border-color: $purple;
+    }
+
+  }
+
+  &__total {
+    display: flex;
+    align-items: baseline;
+    margin-top: 30px;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    &_line {
+      flex-grow: 1;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-bottom: 1px dotted rgba($mainColor, .25);
+    }
+  }
+
+  &__item {
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+}
