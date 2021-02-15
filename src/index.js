@@ -5,5 +5,6 @@ import './assets/components/range/range'
 import './assets/components/guestDropdown/guestDropdown'
 import './assets/components/roomDropdown/roomDropdown'
 
-// import './assets/components/slider/slider'
-import './assets/components/datepicker/datepicker'
+import './assets/components/slider/slider'
+// import './assets/components/datepicker/datepicker'
+import './assets/components/rateButton/rateButton'

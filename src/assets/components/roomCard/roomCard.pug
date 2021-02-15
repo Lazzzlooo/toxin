@@ -1,0 +1,19 @@
+include ../slider/slider
+include ../cardTitle/cardTitle
+include ../rateButton/rateButton
+
+
+mixin roomCard(number=1, type= '', cost= '9 990₽', rating=1, review=0)
+    .roomCard
+        +slider
+        .roomCard__container
+            h2.roomCard__title
+                +cardTitle(number, type, cost)
+            .roomCard__rating
+                +rate-button(true, rating)
+                p.roomCard__review
+                    span.roomCard__review-bold= review
+                    | Отзывов
+
++roomCard('888', 'люкс', '9 990₽', 5, 145)
++roomCard('888', 'люкс', '9 990₽', 5, 145)

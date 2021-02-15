@@ -1,8 +1,10 @@
 import Splide from "@splidejs/splide";
-
-document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '#slider', {
-        type: "fade",
-        width: '270px',
-    } ).mount();
-} );
+const handleSlider = () => {
+    document.querySelectorAll('[data-slider="slider"]').forEach(slider => {
+        new Splide(slider, {
+            type: "fade",
+            width: '270px',
+        }).mount();
+    })
+}
+document.addEventListener( 'DOMContentLoaded', handleSlider);
